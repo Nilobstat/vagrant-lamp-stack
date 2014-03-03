@@ -20,6 +20,7 @@ Il est possible d'accéder à la machine virtuelle via ssh
 	vagrant ssh
 
 Les comptes mysql créés sont:
+
 	user: root
 	password: root
 

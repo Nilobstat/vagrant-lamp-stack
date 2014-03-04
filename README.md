@@ -1,5 +1,11 @@
 Utilisation:
 ------------
+Ajouter la box:
+
+	vagrant box add saucy32 http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-1310-i386-virtualbox-puppet.box
+
+La box est référencée par son nom dans Vagrantfile, veiller à nommer la box saucy32
+ou modifier son nom dans le Vagrantfile.
 
 Cloner le dépot à la racine du projet
 

@@ -41,3 +41,5 @@ Pour écrire dans ce script, depuis la machine virtuelle.
 
 	sudo su
 	mysqldump -uroot -p application > /vagrant/webroot/vagrant/dump.sql
+
+Un module puppet (https://github.com/tPl0ch/puppet-composer) installe composer.

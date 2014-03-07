@@ -16,6 +16,13 @@ lancer la machine virtuelle:
 	cd vagrant
 	vagrant up
 
+Optionnel: Si vous rencontrez des problèmes de synchronisation avec les dossiers
+	partagés, il peut être utile d'installer le plugin vagrant-vbguest
+	(https://github.com/dotless-de/vagrant-vbguest), qui se
+	charge d'installer automatiquement les guest additions de virtualbox.
+
+		vagrant plugin install vagrant-vbguest
+
 Le serveur web est configuré pour servir le dossier parent du dossier vagrant.
 Le site servi est accessible à l'adresse
 

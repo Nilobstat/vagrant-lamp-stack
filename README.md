@@ -16,13 +16,6 @@ lancer la machine virtuelle:
 	cd vagrant
 	vagrant up
 
-Optionnel: Si vous rencontrez des problèmes de synchronisation avec les dossiers
-	partagés, il peut être utile d'installer le plugin vagrant-vbguest
-	(https://github.com/dotless-de/vagrant-vbguest), qui se
-	charge d'installer automatiquement les guest additions de virtualbox.
-
-		vagrant plugin install vagrant-vbguest
-
 Le serveur web est configuré pour servir le dossier parent du dossier vagrant.
 Le site servi est accessible à l'adresse
 
@@ -50,3 +43,17 @@ Pour écrire dans ce script, depuis la machine virtuelle.
 	mysqldump -uroot -p application > /vagrant/webroot/vagrant/dump.sql
 
 Un module puppet (https://github.com/tPl0ch/puppet-composer) installe composer.
+
+== Troubleshooting ==
+
+Si vous rencontrez des problèmes de synchronisation avec les dossiers partagés, (la machine
+virtuelle ne voit pas les fichiers contenus dans un dossier), il peut être nécessaire de
+recompiler les modules de virtualbox dans la machine virtuelle:
+
+	vagrant ssh
+	sudo su
+	/etc/init.d/vboxadd setup
+
+Redémarrer ensuite la machine virtuelle:
+
+	vagrant reload

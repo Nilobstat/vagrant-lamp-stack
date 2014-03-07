@@ -11,6 +11,11 @@ Cloner le dépot à la racine du projet
 
 	git clone https://github.com/Nilobstat/vagrant-lamp-stack.git vagrant
 
+Supprimer le dossier .git et le fichier .gitignore
+
+	rm -rf vagrant/.git
+	rm -f vagrant/.gitignore
+
 lancer la machine virtuelle:
 
 	cd vagrant
@@ -35,6 +40,9 @@ Les mots de passe des comptes mysql créés sont:
 	user: app_user
 	password: app_user
 
+Le mot de passe root est défini dans le fichier ''modules/mysql//manifests/init.pp''
+Les nom et mot de passe de l'utilisateur sont définis dans le fichier ''static.sql''
+
 Le script dump.sql est éxécuté après static.sql, il est destiné à provisionner la
 base de données avec les données utilisées pendant le dévelopement.
 Pour écrire dans ce script, depuis la machine virtuelle.
@@ -44,7 +52,8 @@ Pour écrire dans ce script, depuis la machine virtuelle.
 
 Un module puppet (https://github.com/tPl0ch/puppet-composer) installe composer.
 
-== Troubleshooting ==
+Troubleshooting
+---------------
 
 Si vous rencontrez des problèmes de synchronisation avec les dossiers partagés, (la machine
 virtuelle ne voit pas les fichiers contenus dans un dossier), il peut être nécessaire de

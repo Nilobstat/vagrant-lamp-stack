@@ -1,14 +1,20 @@
+Spécification de la machine virtuelle :
+------------
+ - Distribution : Ubuntu 13.10 i386
+ - Logiciels :
+   Apache2
+   MySQL
+   PHP 5.5
+   Git
+   Composer
+   Sendmail
+
 Utilisation:
 ------------
-Ajouter la box:
 
-	vagrant box add saucy32 http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-1310-i386-virtualbox-puppet.box
+Cloner le dépot à la racine de votre projet
 
-La box est référencée par son nom dans Vagrantfile, veiller à nommer la box saucy32
-ou modifier son nom dans le Vagrantfile.
-
-Cloner le dépot à la racine du projet
-
+	cd /chemin/vers/mon-projet
 	git clone https://github.com/Nilobstat/vagrant-lamp-stack.git vagrant
 
 Supprimer le dossier .git et le fichier .gitignore
